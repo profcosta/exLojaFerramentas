@@ -2,7 +2,8 @@ const express = require("express")
 const router = express.Router()
 
 router.get("/",(req,res)=>{
-    res.send("Página Principal")
+    console.log("ok")
+    res.render("principal")
 })
 
 module.exports = router
