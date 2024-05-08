@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/profcosta/exLojaFerramentas/issues"
   },
-  "homepage": "https://github.com/profcosta/exLojaFerramentas#readme"
+  "homepage": "https://github.com/profcosta/exLojaFerramentas#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
