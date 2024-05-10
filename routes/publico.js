@@ -2,9 +2,8 @@ const express = require("express")
 const router = express.Router()
 const produtos = require("../controls/produtosControler")
 
-
 router.get("/",(req,res)=>{
-    res.render("principal")
+    res.render("publico/principal")
 })
 
 router.get("/produtos/criar",(req,res)=>{
@@ -17,12 +16,12 @@ router.get("/produtos/criar",(req,res)=>{
 })
 
 router.get("/produtos/:nome",(req,res)=>{
-    res.render("produtos", produtos.list(req.params.nome))
+    res.render("publico/produtos", produtos.list(req.params.nome))
 })
 
 
 router.get("/produtos",(req,res)=>{
-    res.render("produtos", produtos.list())
+    res.render("publico/produtos", produtos.list())
 })
 
 
