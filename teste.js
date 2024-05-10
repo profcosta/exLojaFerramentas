@@ -1,1 +1,0 @@
-console.log("deu ruim mais funcionou")
