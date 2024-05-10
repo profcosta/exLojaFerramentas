@@ -1,9 +1,9 @@
 const produtos = require("../json/produtos.json")
 
 function list(filtro=""){
-    console.log(filtro)
+    console.log(produtos)
     if(filtro){
-        dados = produtos.filter(produto => (produto.nome==filtro))
+        dados = produtos.filter(produto => (produto.nome.toLowerCase==filtro.toLowerCase))
     }else{
         dados=produtos
     }
@@ -12,4 +12,11 @@ function list(filtro=""){
     return {dados,total}
 }
 
-module.exports = {list}
+function criar(dados){
+    console.log(dados)
+    produtos.push(dados)
+    console.log(produtos)
+    return true
+}
+
+module.exports = {list,criar}
