@@ -1,1 +1,10 @@
 <h3>Produtos</h3>
+{{#each dados}} 
+    <p><strong>{{nome}}:</strong> R$ {{valor}}</p>
+{{else}}
+    <p>Produto não encontrado</p>
+{{/each}}
+{{#if dados}}
+    <hr>
+    <p><strong>Total:</strong> R$ {{total}}</p>
+{{/if}}
