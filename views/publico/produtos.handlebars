@@ -1,12 +1,16 @@
 <h3>Produtos</h3>
+<p><strong>Pagina:</strong> {{pagina}}</p>
+{{msg_success}}{{msg_error}}
 <hr>
 {{#each dados}} 
     <p><strong>{{nome}}:</strong> R$ {{valor}}</p>
 {{else}}
     <p>Produto não encontrado</p>
+    <hr>
 {{/each}}
 {{#if dados}}
     <hr>
     <p><strong>Total:</strong> R$ {{total}}</p>
+    <hr>
 {{/if}}
-<a href="produtos/criar"><button>Criar Produto</button></a>
+<a href="/produtos/criar"><button>Criar Produto</button></a>

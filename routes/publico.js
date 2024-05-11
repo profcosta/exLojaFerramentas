@@ -7,21 +7,25 @@ router.get("/",(req,res)=>{
 })
 
 router.get("/produtos/criar",(req,res)=>{
-    info = {
-        "nome":"Chave Philips",
-        "valor":9.30
+    res.render("publico/criarProdutos")
+})
+
+router.post("/produtos/criar",(req,res)=>{
+    response = produtos.criar(req.body)
+    if(response.sucess){
+        req.flash("msg_success",response.msg);
+    }else{
+        req.flash("msg_error",response.msg);
     }
-    console.log(produtos.criar(info))
-    res.send(produtos.list())
+    return res.redirect("/produtos")
 })
 
 router.get("/produtos/:nome",(req,res)=>{
-    res.render("publico/produtos", produtos.list(req.params.nome))
+    res.render("publico/produtos", produtos.list(1,10,req.params.nome))
 })
 
-
 router.get("/produtos",(req,res)=>{
-    res.render("publico/produtos", produtos.list())
+    res.render("publico/produtos", produtos.list(2))
 })
 
 

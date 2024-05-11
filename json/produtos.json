@@ -10,5 +10,29 @@
 },{
     "nome":"Martelo",
     "valor":9.30
+},{
+    "nome":"Parafuso",
+    "valor":1.30
+},{
+    "nome":"Prego",
+    "valor":1.50
+},{
+    "nome":"Chave de fenda",
+    "valor":6.30
+},{
+    "nome":"Martelo",
+    "valor":9.30
+},{
+    "nome":"Parafuso",
+    "valor":1.30
+},{
+    "nome":"Prego",
+    "valor":1.50
+},{
+    "nome":"Chave de fenda",
+    "valor":6.30
+},{
+    "nome":"Martelo",
+    "valor":9.30
 }
 ]
